@@ -5,11 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>myHandler</title>
     <link rel="stylesheet" href="CSS/main.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap');
+        </style>
+        
 </head>
 <body>
+
+    <!-- ---------------------------------------------------------------------------------------- -->
+
+        <!-- LOADER -->
+
+        <div class="loader">
+            <img src="Img/bouncing-squares.svg" alt="loader">
+        </div>
+
+    <!-- --------------------------------------------------------------------------------------- -->
+
     <div class="bg">
         <video src="Video/background.mp4" autoplay muted loop></video>
     </div>
@@ -19,11 +31,15 @@
             <div class="logo"><img src="Img/LOGO.png" alt=""></div>
     </nav>
     <div class="login">
-        <h2 class="login-here">Login Here...</h2>
-        <form action="">
+        <h2 class="login-here">WELCOME BACK!</h2>
+        <P class="login-here">PLEASE LOGIN..</P>
+        <form action="" method="post">
            
-        <input class="mail" type="email" placeholder="Enter your Email">
-        <input class="pass" type="password" placeholder="Enter your Password">
+        <input class="forminput" type="text" id="email" placeholder="Enter your Email">
+        <input class="forminput" type="password" id="pass" placeholder="Enter your Password">
+        <input type="submit" class="formbtn" value="login" id="submit">
+        <br>
+        <h1 id="error"></h1>
         </form>
     </div>
 
@@ -31,6 +47,7 @@
     </div>
     
     
-    
+    <script src="JS/jquery.js"></script>
+    <script src="JS/login.js"></script>
 </body>
 </html>

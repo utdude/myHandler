@@ -7,7 +7,18 @@
       "default_popup": "index.html",
       "default_icon": "Img/LOGO.png",
       "resources": ["font/*.ttf"]
-    }
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["JS/jquery.js","JS/login.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": [ "/font/DancingScript-Regular.ttf" ],
+        "matches": ["<all_urls>"]
+      }]
     
   
   }

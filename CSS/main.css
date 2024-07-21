@@ -1,16 +1,31 @@
+/* latin-ext */
 @font-face {
-    font-family: f;
-    src: url(../font/DancingScript-Regular.ttf);
+    font-family: 'Edu AU VIC WA NT Hand';
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/eduauvicwanthand/v1/C8c94dY1tX2x0uuiUHFS4y7ERV-jfqJ6x06dH9MtW4Q.woff2) format('woff2');
+    unicode-range: U+0100-02AF, U+0304, U+0308, U+0329, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+  }
+  /* latin */
+  @font-face {
+    font-family: 'Edu AU VIC WA NT Hand';
+    font-style: normal;
+    font-weight: 400 700;
+    font-display: swap;
+    src: url(https://fonts.gstatic.com/s/eduauvicwanthand/v1/C8c94dY1tX2x0uuiUHFS4y7ERV-jfqJ6x06dEdMt.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
 *{
     margin:0;
     padding:0;
+    overflow-y: hidden;
 }
-body{
-    height:650px;
-    width:400px;
-    background-color: rgb(255, 0, 0);
-    font-family: "f", cursive;
+html,body{
+    height:600px !important;
+    width:400px !important;
+    overflow-y: hidden;
+    font-family: "Edu AU VIC WA NT Hand", cursive;
 }
 
 .bg{
@@ -38,7 +53,7 @@ body{
 
 .logo img{
     
-    height: 250px;
+    height: 200px;
     
     border-radius: 5ch;
 
@@ -46,14 +61,24 @@ body{
 }
 .login-here{
     color: whitesmoke;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom:5px;
+}
+.login {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
 }
 .login form{
     display: flex;
+    width: 100%;
     justify-content: center;
     flex-direction: column;
-    height: 150px;
+    height: auto;
     align-items: center;
+    margin-top: 20px;
 
 }
 .mail{
@@ -65,3 +90,43 @@ body{
     height: 30px;
 }
 
+.forminput{
+    width:80%;
+    margin:10px;
+    padding:10px;
+    border:none;
+    border-radius: 5px;
+    color:#1a1a1a;
+}
+.formbtn{
+    width:50%;
+    padding:10px;
+    font-size: 20px;
+    color:#fff;
+    background-color: #ce2828;
+    margin:20px;
+    border:none;
+    border-radius: 5px;
+
+}
+
+#error{
+    color:#ff1100;
+    font-size: 20px;
+}
+
+.loader{
+    width:100%;
+    display: none;
+    height:600px;
+    position: fixed;
+    z-index: 3;
+    background-color: rgba(0,0,0,0.9);
+    
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.loader img{
+    width:50%;
+}
