@@ -7,47 +7,55 @@
     <link rel="stylesheet" href="CSS/main.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap');
-        </style>
-        
+    </style>
+
 </head>
 <body>
 
-    <!-- ---------------------------------------------------------------------------------------- -->
+<!-- ---------------------------------------------------------------------------------------- -->
 
-        <!-- LOADER -->
+<!-- LOADER -->
 
-        <div class="loader">
-            <img src="Img/bouncing-squares.svg" alt="loader">
-        </div>
+<div class="loader">
+    <img src="Img/bouncing-squares.svg" alt="loader">
+</div>
 
-    <!-- --------------------------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------------------------- -->
 
-    <div class="bg">
-        <video src="Video/background.mp4" autoplay muted loop></video>
-    </div>
-    <div class="content">
-
-        <nav class="navbar">
-            <div class="logo"><img src="Img/LOGO.png" alt=""></div>
+<div class="bg">
+    <video src="Video/background.mp4" autoplay muted loop></video>
+</div>
+<div class="content">
+    <nav class="navbar">
+        <div class="logo"><img src="Img/LOGO.png" alt=""></div>
     </nav>
     <div class="login">
         <h2 class="login-here">WELCOME BACK!</h2>
-        <P class="login-here">PLEASE LOGIN..</P>
+        <p class="login-here">Login Here</p>
         <form action="" method="post">
-           
-        <input class="forminput" type="text" id="email" placeholder="Enter your Email">
-        <input class="forminput" type="password" id="pass" placeholder="Enter your Password">
-        <input type="submit" class="formbtn" value="login" id="submit">
-        <br>
-        <h1 id="error"></h1>
+
+            <input class="forminput" type="text" id="email" placeholder="Enter your Email">
+            <input class="forminput" type="password" id="pass" placeholder="Enter your Password">
+            <input type="submit" class="formbtn" value="login" id="submit" style="width: 150px">
+            <br>
+            <h1 id="error"></h1>
         </form>
     </div>
-
+    <div class="signup">
+        <p>Do not have an account?</p>
+        <a href="/Pages/SignUp.html">
+            <button onclick="document.getElementById('id01').style.display='block'" class="button">
+                <span>Sign Up</span>
+            </button>
+        </a>
 
     </div>
-    
-    
-    <script src="JS/jquery.js"></script>
-    <script src="JS/login.js"></script>
+
+
+</div>
+
+
+<script src="JS/jquery.js"></script>
+<script src="JS/login.js"></script>
 </body>
 </html>
