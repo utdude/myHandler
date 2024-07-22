@@ -133,10 +133,7 @@ html,body{
     border-radius: 5px;
 }
 
-#error{
-    color:#ff1100;
-    font-size: 20px;
-}
+
 
 .loader{
     width:100%;
@@ -152,4 +149,34 @@ html,body{
 }
 .loader img{
     width:50%;
+}
+
+.error-popup{
+    display: none;
+    width:100%;
+    z-index: 4;
+    background-color: #ff1100;
+    height:auto;
+    position: fixed;
+    top:0;
+}
+.error-popup p{
+    padding:10px;
+    font-size: 15px;
+    color:#fff;
+}
+
+.success-popup{
+    display: none;
+    width:100%;
+    z-index: 4;
+    background-color: #12b6a3;
+    height:auto;
+    position: fixed;
+    top:0;
+}
+.success-popup p{
+    padding:10px;
+    font-size: 15px;
+    color:#fff;
 }

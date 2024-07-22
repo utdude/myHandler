@@ -3,9 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>SignUp</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
+<body style="height: 600px; width:400px;">
+
+
+        <!--error pop-up-->
+
+   <div class="error-popup">
+    
+    <p id="error"></p>
+   </div>
+   <!-- ----------------------------------------------------------------------------------------------------- -->
+
+    <!-- ---------------------------------------------------------------------------------------- -->
+    <!--success pop-up-->
+
+    <div class="success-popup">
+    
+        <p id="msg"></p>
+       </div>
+       <!-- ----------------------------------------------------------------------------------------------------- -->
+
+    <!-- LOADER -->
+
+    <div class="loader">
+        <img src="../Img/bouncing-squares.svg" alt="loader">
+    </div>
+
+    <!-- --------------------------------------------------------------------------------------- -->
+
+
 <form>
     <div class="container">
         <h1>Register</h1>
@@ -16,18 +44,21 @@
         <input type="text" placeholder="Enter Email" name="email" id="email" required>
 
         <label for="psw"><b>Password</b></label>
-        <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
+        <input type="password" placeholder="Enter Password" name="pass" id="pass" required>
 
         <label for="psw-repeat"><b>Repeat Password</b></label>
-        <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+        <input type="password" placeholder="Repeat Password" name="cpass" id="cpass" required>
         <hr>
 
-        <button type="submit" class="registerbtn">Register</button>
+        <button type="submit" id="submit" class="registerbtn">Register</button>
     </div>
 
     <div class="container signin">
         <p>Already have an account? <a href="#">Sign in</a>.</p>
     </div>
 </form>
+
+<script src="../JS/jquery.js"></script>
+    <script src="../JS/register.js"></script>
 </body>
 </html>

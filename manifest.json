@@ -8,6 +8,9 @@
       "default_icon": "Img/LOGO.png",
       "resources": ["font/*.ttf"]
     },
+    "permissions": [
+      "storage"
+    ],
     "content_scripts": [
       {
         "matches": ["<all_urls>"],

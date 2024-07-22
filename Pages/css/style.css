@@ -59,3 +59,48 @@ a {
     background-color: #f1f1f1;
     text-align: center;
 }
+.loader{
+    width:100%;
+    display: none;
+    height:600px;
+    position: fixed;
+    z-index: 3;
+    background-color: rgba(0,0,0,0.9);
+
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.loader img{
+    width:50%;
+}
+
+.error-popup{
+    display: none;
+    width:100%;
+    z-index: 4;
+    background-color: #ff1100;
+    height:auto;
+    position: fixed;
+    top:0;
+}
+.error-popup p{
+    padding:10px;
+    font-size: 15px;
+    color:#fff;
+}
+
+.success-popup{
+    display: none;
+    width:100%;
+    z-index: 4;
+    background-color: #12b6a3;
+    height:auto;
+    position: fixed;
+    top:0;
+}
+.success-popup p{
+    padding:10px;
+    font-size: 15px;
+    color:#fff;
+}

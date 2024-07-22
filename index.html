@@ -6,53 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>myHandler</title>
     <link rel="stylesheet" href="CSS/main.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&display=swap');
-
-        body {
-            background-color: #f2f2f2;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .error-container {
-            text-align: center;
-            background: #fff;
-            padding: 40px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-        }
-
-        .error-title {
-            font-size: 72px;
-            color: #ff4c4c;
-            margin: 0;
-        }
-
-        .error-message {
-            font-size: 24px;
-            color: #333;
-            margin: 20px 0;
-        }
-
-        .home-button {
-            display: inline-block;
-            padding: 10px 20px;
-            background: #ff4c4c;
-            color: #fff;
-            text-decoration: none;
-            border-radius: 5px;
-            transition: background 0.3s ease;
-        }
-
-        .home-button:hover {
-            background: #e04343;
-        }
-    </style>
 
 </head>
 
@@ -61,11 +14,20 @@
     <!-- ---------------------------------------------------------------------------------------- -->
     <!--error pop-up-->
 
-    <div class="error-container">
-        <div class="error-title">404</div>
-        <div class="error-message">Page Not Found</div>
-        <a href="/" class="home-button">Go Home</a>
-    </div>
+   <div class="error-popup">
+    
+    <p id="error"></p>
+   </div>
+   <!-- ----------------------------------------------------------------------------------------------------- -->
+
+    <!-- ---------------------------------------------------------------------------------------- -->
+    <!--success pop-up-->
+
+    <div class="success-popup">
+    
+        <p id="msg"></p>
+       </div>
+       <!-- ----------------------------------------------------------------------------------------------------- -->
 
     <!-- LOADER -->
 
@@ -89,27 +51,28 @@
 
                 <input class="forminput" type="text" id="email" placeholder="Enter your Email">
                 <input class="forminput" type="password" id="pass" placeholder="Enter your Password">
-                <input type="submit" class="formbtn" value="login" id="submit" style="width: 150px">
+                <input type="submit" class="formbtn" value="login" id="submit">
                 <br>
                 <h1 id="error"></h1>
             </form>
         </div>
         <div class="signup">
             <p>Do not have an account?</p>
-            <a href="/Pages/SignUp.html">
-                <button onclick="document.getElementById('id01').style.display='block'" class="button">
+            
+                <button class="button" id="signupRedirect">
                     <span>Sign Up</span>
                 </button>
-            </a>
+            
 
         </div>
 
 
     </div>
 
-
+    
     <script src="JS/jquery.js"></script>
     <script src="JS/login.js"></script>
+    <script src="JS/checklogin.js"></script>
 </body>
 
 </html>
