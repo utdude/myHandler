@@ -20,11 +20,14 @@ $(document).ready(function() {
                     $(".error-popup #error").html(obj['msg']);
                     $(".error-popup").css("display","block");
                 }else{
-                    $(".success-popup #msg").html(obj['msg']);
+                    $(".success-popup #msg").html("Logged in successfully!");
                     $(".success-popup").css("display","block");
-                    var id = toString(obj['msg']);
-                    chrome.storage.local.set({"mymyHandlerLoggedIN":id});
                     window.location = "./pages/main.html";
+                    var id = obj['msg'];
+                    chrome.storage.local.set({"myhandlerloggedin":String(obj['msg'])});
+
+                   
+                     
                 }
                 
                 $(".loader").css("display","none");

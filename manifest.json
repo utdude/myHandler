@@ -21,7 +21,14 @@
       {
         "resources": [ "/font/DancingScript-Regular.ttf" ],
         "matches": ["<all_urls>"]
-      }]
-    
+      }],
+     
+    "background":{
+      "service_worker": "JS/services.js"
+    },
+
+    "content_security_policy": {
+      "extension_page":"script-src 'self' 'wasm-unsafe-eval'; object-src 'self'" 
+  }
   
   }

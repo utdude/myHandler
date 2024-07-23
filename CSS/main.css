@@ -180,3 +180,86 @@ html,body{
     font-size: 15px;
     color:#fff;
 }
+
+
+#main-body{
+    background:url(../Img/bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#data{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+    height:600px;
+    min-height: min-content;
+    overflow:scroll;
+}
+
+#data {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+#data::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+.element{
+    display: flex;
+    width:90%;
+    flex-shrink: 0;
+    justify-content: space-between;
+    color:#fff;
+
+    border-radius: 10px;
+    margin-top:10px;
+    
+}
+.element div{
+    display: flex;
+    padding:10px;
+    
+}
+.element .url{
+    width:70%;
+    background-color: #fff;
+    color:#1a1a1a;
+}
+.element .source{
+    background-color: #ce2828;
+    color:#fff;
+    width:30%;
+}
+#addbtn{
+    position: fixed;
+    bottom:0;
+    width:100%;
+    padding-top:10px;
+    padding-bottom:10px;
+    border:none;
+    font-size: 20px;
+    color:#fff;
+    text-decoration: none;
+    text-align: center;
+    background-color: #ce2828;
+}
+
+.header{
+    width:100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #ce2828;
+}
+.header img{
+    height:30px;
+}
+.header button{
+    color:#fff;
+    padding-left:20px;
+    padding-right: 20px;
+    background: #ce2828;
+    border:none;
+    font-size: 15px;
+}

@@ -1,26 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+   
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../CSS/main.css">
     <link rel="stylesheet" href="css/style.css">
     <title>main page</title>
 </head>
-<body>
+<body id="main-body">
+            <!-- ---------------------------------------------------------------------------------------- -->
+    <!--error pop-up-->
+
+   <div class="error-popup">
+    
+    <p id="error"></p>
+   </div>
+   <!-- ----------------------------------------------------------------------------------------------------- -->
+
+    <!-- ---------------------------------------------------------------------------------------- -->
+    <!--success pop-up-->
+
+    <div class="success-popup">
+    
+        <p id="msg"></p>
+       </div>
+       <!-- ----------------------------------------------------------------------------------------------------- -->
+
+    <!-- LOADER -->
+
+    <div class="loader">
+        <img src="../Img/bouncing-squares.svg" alt="loader">
+    </div>
+
+    <!-- --------------------------------------------------------------------------------------- -->
+
+
+    <input type="hidden" id="user-id" val="">
+
+    <div class="header">
+        <img src="../Img/LOGO.png" alt="logo">
+        <button id="logout">logout</button>
+    </div>
+
+
+
+
     <!-- ---------------------------------fetch data-------------------------------------------------- -->
-
-
-
-
-
+    <div id="data"></div>
     <!-- ------------------------------------------------------------------------------------------------------ -->
 
 
 
-    <a href="AddHandle.html">Add handle</a>
-    <button id="logout"class="formbtn">logout</button>
+    <a href="AddHandle.html" id="addbtn">Add handle</a>
+    
+
+
+   
     <script src="../JS/jquery.js"></script>
     <script src="../JS/main.js"></script>
+    <script src="../JS/getHandle.js"></script>
+    <script src="../JS/copy.js"></script>
 </body>
 </html>
