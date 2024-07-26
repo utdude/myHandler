@@ -6,7 +6,7 @@ $(document).ready(function() {
         var pass = $("#pass").val();
 
         $.ajax({
-            url: "http://myhandler.rf.gd/Login.php",
+            url: "https://myhandler-git-main-utdudes-projects.vercel.app/Login",
 
             method: "post",
             crossDomain: true,
@@ -15,16 +15,16 @@ $(document).ready(function() {
                 $(".loader").css("display","flex");
             },
             success:function(data){
-                var obj = JSON.parse(data);
-                if(obj['error'] == '1'){
-                    $(".error-popup #error").html(obj['msg']);
+                
+                if(data['error'] == '1'){
+                    $(".error-popup #error").html(data['msg']);
                     $(".error-popup").css("display","block");
                 }else{
                     $(".success-popup #msg").html("Logged in successfully!");
                     $(".success-popup").css("display","block");
                     window.location = "./pages/main.html";
-                    var id = obj['msg'];
-                    chrome.storage.local.set({"myhandlerloggedin":String(obj['msg'])});
+                    var id = data['msg'];
+                    chrome.storage.local.set({"myhandlerloggedin":String(data['msg'])});
 
                    
                      

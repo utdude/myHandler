@@ -10,7 +10,7 @@ $(document).ready(function() {
 
 
             $.ajax({
-                url: "http://myhandler.rf.gd/Register.php",
+                url: "https://myhandler-git-main-utdudes-projects.vercel.app/Register",
     
                 method: "post",
                 crossDomain: true,
@@ -19,13 +19,18 @@ $(document).ready(function() {
                     $(".loader").css("display","flex");
                 },
                 success:function(data){
-                    var obj = JSON.parse(data);
-                    if(obj['error'] == '1'){
-                        $(".error-popup #error").html(obj['msg']);
+                    // var obj = JSON.parse(data);
+                    if(data['error'] == '1'){
+                        $(".error-popup #error").html(data['msg']);
                         $(".error-popup").css("display","block");
                     }else{
-                        $(".success-popup #msg").html(obj['msg']);
+                        $(".success-popup #msg").html(data['msg']);
                         $(".success-popup").css("display","block");
+                        
+                        var id = data['msg'];
+                        chrome.storage.local.set({"myhandlerloggedin":String(data['msg'])});
+
+                        window.location = "main.html";
                     }
                     
                     $(".loader").css("display","none");

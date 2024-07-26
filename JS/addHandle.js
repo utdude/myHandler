@@ -17,7 +17,7 @@ chrome.storage.local.get("myhandlerloggedin", (data) => {
         
 
         $.ajax({
-            url: "http://myhandler.rf.gd/addHandle.php",
+            url: "https://myhandler-git-main-utdudes-projects.vercel.app/addHandles",
 
             method: "post",
             crossDomain: true,
@@ -26,14 +26,14 @@ chrome.storage.local.get("myhandlerloggedin", (data) => {
                 $(".loader").css("display","flex");
             },
             success:function(data){
-                var obj = JSON.parse(data);
-                if(obj['error'] == '1'){
-                    $(".error-popup #error").html(obj['msg']);
+                
+                if(data['error'] == '1'){
+                    $(".error-popup #error").html(data['msg']);
                     $(".error-popup").css("display","block");
                 }else{
-                    $(".success-popup #msg").html(obj['msg']);
+                    $(".success-popup #msg").html(data['msg']);
                     $(".success-popup").css("display","block");
-                    
+                    window.location = "main.html";
                 }
                 
                 $(".loader").css("display","none");

@@ -5,7 +5,7 @@ $(document).ready(function () {
    
     $.ajax({
 
-        url: "http://myhandler.rf.gd/getHandle.php",
+        url: "https://myhandler-git-main-utdudes-projects.vercel.app/getHandles",
         method: "POST",
         crossDomain: true,
         data: {id:id},
@@ -13,20 +13,20 @@ $(document).ready(function () {
             // $(".loader").css("display","flex");
         },
         success:function(data){
-            var obj = JSON.parse(data);
-            // if(obj['error'] == '1'){
-            //     $(".error-popup #error").html(obj['msg']);
+           
+            // if(data['error'] == '1'){
+            //     $(".error-popup #error").html(data['msg']);
             //     $(".error-popup").css("display","block");
             // }else{
-            //     $(".success-popup #msg").html(obj['msg']);
+            //     $(".success-popup #msg").html(data['msg']);
             //     $(".success-popup").css("display","block");
                 
             // }
 
-            for(let i=0; i<obj['msg'].length; i++){
+            for(let i=0; i<data['msg'].length; i++){
 
                 let s = 50;
-                var url = obj['msg'][i][2];
+                var url = data['msg'][i].url;
                 var new_url = url;
 
                 if(url.length > s){
@@ -36,7 +36,7 @@ $(document).ready(function () {
 
                 }
 
-                $("#data").append('<div class="element"><div class="source"><p>'+obj['msg'][i][1]+'</p></div><div class="url"><a href="'+url+'">'+new_url+'</a></div></div>');
+                $("#data").append('<div class="element"><div class="source"><p>'+data['msg'][i].social+'</p></div><div class="url"><a href="'+url+'">'+new_url+'</a></div></div>');
             }
             
             $(".loader").css("display","none");
