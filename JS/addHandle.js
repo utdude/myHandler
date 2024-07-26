@@ -7,11 +7,15 @@ chrome.storage.local.get("myhandlerloggedin", (data) => {
     }
 });
 
-    $("#submit").click(function(e){
+    $("#addhandlesubmit").click(function(e){
         e.preventDefault();
 
-        var email = $("#social").val();
-        var pass = $("#url").val();
+        var social = $("#selectedsocial").val();
+
+        if(social === ""){
+            social = $("#newsocial").val();
+        }
+        var url = $("#url").val();
     
         var id = $("#user-id").val();
         
@@ -21,7 +25,7 @@ chrome.storage.local.get("myhandlerloggedin", (data) => {
 
             method: "post",
             crossDomain: true,
-            data: {id:id,social:email,url:pass},
+            data: {id:id,social:social,url:url},
             beforeSend:function(){
                 $(".loader").css("display","flex");
             },

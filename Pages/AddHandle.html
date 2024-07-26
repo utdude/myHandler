@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>add handle</title>
     <link rel="stylesheet" href="../CSS/main.css">
-    <link rel="stylesheet" href="css/style.css">
+    
 </head>
-<body >
+<body id="main-body" style="display: flex; justify-content: center; align-items: center;"> 
 
         <!-- ---------------------------------------------------------------------------------------- -->
     <!--error pop-up-->
@@ -35,18 +35,61 @@
 
     <!-- --------------------------------------------------------------------------------------- -->
 
+    <!-- ----------------------------------------------------------------------------------------------------------------
+
+    select social media -->
+    <input type="hidden" id="user-id" value="">
+    <input type="hidden" name="" value="" id="selectedsocial">
+
+        <div class="selectSocialoverlay">
+            <h1>Select the social handle..</h1>
+            <div class="grid">
+                
+                <div class="obj">
+                    <img src="../Img/insta.png" alt="Instagram">
+                </div>
+
+                <div class="obj">
+                    <img src="../Img/lnkdin.png" alt="Linkedin">
+                </div>
+
+                <div class="obj">
+                    <img src="../Img/github.png" alt="Github">
+                </div>
+
+                <div class="obj">
+                    <img src="../Img/gmail.png" alt="Gmail">
+                </div>
+
+                <div class="obj">
+                    <img src="../Img/x.png" alt="X">
+                </div>
+
+                <div class="obj">
+                    <img src="../Img/facebook.png" alt="Facebook">
+                </div>
+            </div>
+            <h1>is your handle not listed?</h1>
+            <button id="other" class="formbtn" style="margin:10px;">Other social media</button>
+        </div>
 
 
-    <form action="" style="width:80%;">
-        <input type="hidden" id="user-id" value="">
-        <input type="text" id="social">
-        <input type="text" id="url">
-        <button class="formbtn" id="submit">submit</button>
-    </form>
+    <!-- ----------------------------------------------------------------------------------------------------------------- -->
+
+
+
+    <div class="addhandleform">
+        <img src="../Img/github.png" alt="" id="socialpreview">
+        <!-- <button id="openoverlayaddsocial">Select your Handle</button> -->
+        <div id="newsocialdiv" style="width:100%; display: flex; justify-content: center; align-items: center; margin-bottom:10px;"></div>
+        <input type="text" id="url" placeholder="Add Handle Url..">
+        <input type="submit" id="addhandlesubmit" class="formbtn" value="Add Handle">
+    </div>
 
 
     
     <script src="../JS/jquery.js"></script>
     <script src="../JS/addHandle.js"></script>
+    <script src="../JS/addHandleFunc.js"></script>
 </body>
 </html>

@@ -192,6 +192,8 @@ html,body{
 
 
 #main-body{
+    width:400px;
+    height:600px;
     background:url(../Img/bg.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -292,4 +294,79 @@ html,body{
     background-color: #ce2828;
     color:#fff;
     border:none;
+}
+.selectSocialoverlay{
+    width:100%;
+    height:600px;
+    position: fixed;
+    z-index:2;
+    background-color: rgb(206,40,40);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.selectSocialoverlay .grid{
+    width:80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    border-radius: 20px;
+    height:auto;
+    padding:10px;
+    background-color: #fff;
+}
+.selectSocialoverlay .grid .obj{
+    width:80px;
+    height:80px;
+    margin:5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.selectSocialoverlay .grid img{
+    width:95%;
+
+}
+.selectSocialoverlay h1{
+    color:#fff;
+    font-size: 15px;
+    margin:10px;
+}
+.selectSocialoverlay button{
+    background-color: #fff;
+    color:#ce2828;
+}
+.addhandleform{
+    width: 100%;
+    height:600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.addhandleform input[type="text"]{
+    width:80%;
+    padding:15px;
+    border:none;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size:15px;
+}
+
+.addhandleform #openoverlayaddsocial{
+    width:80%;
+    padding:20px;
+    background: #ce2828;
+    border:2px solid #b41b1b;
+    border-radius: 10px;
+    color:#fff;
+    font-size:15px;
+    margin:10px;
+}
+
+.addhandleform #socialpreview{
+    width:100px;
+    margin:20px;
 }
