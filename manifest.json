@@ -4,7 +4,7 @@
     "description": "you can save all your social handles and you can just ONE - CLICK - COPY the urls when needed.",
     "version": "1.0",
     "action": {
-      "default_popup": "index.html",
+      "default_popup": "Pages/main.html",
       "default_icon": "Img/LOGO.png",
       "resources": ["font/*.ttf"]
     },

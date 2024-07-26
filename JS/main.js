@@ -2,7 +2,7 @@ chrome.storage.local.get("myhandlerloggedin", (data) => {
     if(String(data.myhandlerloggedin) !== String('undefined')){
          $("#user-id").val(data.myhandlerloggedin);
     }else{
-        alert("errorro");
+       window.location = "../index.html";
     }
 });
 $(document).ready(function() {
