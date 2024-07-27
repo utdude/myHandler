@@ -6,15 +6,20 @@ chrome.storage.local.get("myhandlerloggedin", (data) => {
     }
 });
 $(document).ready(function() {
+
+
     $("#logout").click(function() {
         chrome.storage.local.clear();
         window.location = "../index.html";
     });
 
+    $("#back-home").click(function() {
+        window.location = "./main.html";
+    })
 
-    $("#data").on("click", "a", function(e) {
+    $("#data").on("click", ".element", function(e) {
         e.preventDefault();
-        navigator.clipboard.writeText($(this).attr("href"));
+        navigator.clipboard.writeText($(this).attr("reference"));
         $(".success-popup #msg").html("link copied!");
         $(".success-popup").css("display","block");
 

@@ -217,6 +217,7 @@ html,body{
 }
 .element{
     display: flex;
+    cursor: pointer;
     width:90%;
     flex-shrink: 0;
     justify-content: space-between;
@@ -317,9 +318,13 @@ html,body{
     padding:10px;
     background-color: #fff;
 }
+button{
+    cursor: pointer;
+}
 .selectSocialoverlay .grid .obj{
     width:80px;
     height:80px;
+    cursor: pointer;
     margin:5px;
     display: flex;
     justify-content: center;
@@ -373,4 +378,20 @@ html,body{
 #data p{
     color:#ce2828;
     font-size: 15px;
+}
+#back-home{
+    padding:5px;
+    position: fixed;
+    top:10px;
+    left:20px;
+    border:none;
+    border-radius: 50px;
+    color:#fff;
+    background: none;
+    font-size: 25px;
+   margin:10px;
+    
+    cursor: pointer;
+    
+    
 }
