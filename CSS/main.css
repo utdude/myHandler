@@ -370,3 +370,7 @@ html,body{
     width:100px;
     margin:20px;
 }
+#data p{
+    color:#ce2828;
+    font-size: 15px;
+}

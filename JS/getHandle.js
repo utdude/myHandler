@@ -16,14 +16,13 @@ $(document).ready(function () {
         },
         success:function(data){
            
-            // if(data['error'] == '1'){
-            //     $(".error-popup #error").html(data['msg']);
-            //     $(".error-popup").css("display","block");
-            // }else{
-            //     $(".success-popup #msg").html(data['msg']);
-            //     $(".success-popup").css("display","block");
+            if(data['error'] == '1'){
+                $("#data").append("<p>"+data['msg']+"</p>");
+                $(".loader").css("display","none");
+            }else{
                 
-            // }
+                
+            
             
             for(let i=0; i<data['msg'].length; i++){
                 let socialexists = 0;
@@ -53,6 +52,7 @@ $(document).ready(function () {
             }
             
             $(".loader").css("display","none");
+        }
         }
 
     });
