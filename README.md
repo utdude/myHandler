@@ -10,6 +10,14 @@ you can save all your social handles and you can just "ONE - CLICK - COPY" the u
 
 ### Installing
 
+- clone or download the repository
+- go to chrome -> manage extensionss
+- switch on the developer mode
+- click on load unpacked
+- select the folder you downloaded the repository
+- click ok
+- ENJOY HANDLING!
+
 --------------------------------------------------------------------------
 
 ## Authors
